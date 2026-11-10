@@ -1,0 +1,53 @@
+:root {
+  --bg: #eef1f4; --panel: #fff; --ink: #18212b; --muted: #5b6877; --line: #d5dbe2;
+  --accent: #17605d; --accent-ink: #fff; --amber: #8a5300; --amber-bg: #fdf0d9; --err: #a32020;
+  --ui: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; --serif: Georgia, "Iowan Old Style", serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.5 var(--ui); }
+button, input, select { font: inherit; color: inherit; }
+button { cursor: pointer; border: 1px solid var(--line); background: var(--panel); border-radius: 6px; padding: 6px 12px; }
+button:hover { border-color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+button.link { border: 0; background: none; color: var(--accent); padding: 0 4px; text-decoration: underline; }
+a { color: var(--accent); }
+.muted { color: var(--muted); font-size: 13px; }
+.error { color: var(--err); }
+.bar { display: flex; align-items: center; gap: 12px; padding: 10px 24px; background: var(--panel); border-bottom: 1px solid var(--line); }
+.brand { font-weight: 700; text-decoration: none; color: var(--ink); margin-right: auto; }
+.wrap { max-width: 860px; margin: 24px auto; padding: 0 16px; }
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 20px; }
+.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--line); }
+.tabs button { border: 0; border-bottom: 3px solid transparent; border-radius: 0; background: none; }
+.tabs button.on { border-bottom-color: var(--accent); font-weight: 600; }
+.docs { list-style: none; margin: 12px 0; padding: 0; display: grid; gap: 8px; }
+.doc { width: 100%; display: grid; grid-template-columns: 1fr auto auto; gap: 16px; align-items: center; text-align: left; padding: 12px 14px; }
+.doc-title { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.badge { font-size: 12px; padding: 2px 8px; border-radius: 99px; }
+.badge.owned { background: #dcefed; color: var(--accent); }
+.badge.shared { background: var(--amber-bg); color: var(--amber); }
+.empty { padding: 28px 0; color: var(--muted); }
+.login { max-width: 420px; margin: 12vh auto; padding: 0 16px; display: grid; gap: 10px; }
+.login h1 { font-family: var(--serif); font-size: 34px; margin: 0; }
+.user { display: flex; justify-content: space-between; padding: 12px 14px; }
+.user span { color: var(--muted); }
+.titlebar { display: flex; align-items: center; gap: 12px; margin-top: 8px; }
+.title { flex: 1; font: 700 26px var(--serif); border: 1px solid transparent; border-radius: 6px; padding: 4px 8px; background: transparent; }
+.title:hover:not(:disabled), .title:focus { border-color: var(--line); background: var(--panel); }
+.status { font-size: 13px; color: var(--muted); white-space: nowrap; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 4px; margin: 10px 0; padding: 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; position: sticky; top: 0; z-index: 1; }
+.toolbar button { min-width: 36px; padding: 4px 8px; border-color: transparent; }
+.toolbar button.on { background: var(--accent); color: var(--accent-ink); }
+.page { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; min-height: 60vh; padding: 40px 56px; font: 17px/1.7 var(--serif); }
+.page .ProseMirror { outline: none; min-height: 55vh; }
+.page h1 { font-size: 2em; line-height: 1.25; } .page h2 { font-size: 1.5em; line-height: 1.3; } .page h3 { font-size: 1.2em; }
+.page ul, .page ol { padding-left: 1.5em; }
+.share { margin-top: 28px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px 20px; }
+.share h2 { margin: 0 0 10px; font-size: 16px; }
+.share form { display: flex; flex-wrap: wrap; gap: 8px; }
+.share input { flex: 1; min-width: 200px; padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; }
+.share select { padding: 6px; border-radius: 6px; border: 1px solid var(--line); }
+.share ul { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 6px; }
+.share li { display: flex; align-items: center; gap: 10px; } .share li > span:first-child { margin-right: auto; }
+@media (max-width: 600px) { .page { padding: 20px; } .doc { grid-template-columns: 1fr; gap: 4px; } }
