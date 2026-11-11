@@ -10,8 +10,7 @@
 
 **Import:** `.txt` becomes paragraphs, `.md` goes through `marked`, `.docx` through `mammoth`, then the same sanitizer. The result is a new owned document, so import reuses the normal create path.
 
-**What I prioritized:** a correct permission model with tests, an editing flow that feels reliable (autosave state is always visible), and a one-command deploy.
+**What I prioritized**: a correct permission model with tests, an editing flow that feels reliable (autosave state is always visible), and a one-command deploy.
 
 **Deliberately cut:** real auth (cookie holds a seeded user id), real-time collaboration (last write wins when two editors save), version history, attachments, comments.
 
-**Next with 2-4 more hours:** version history with restore; conflict handling via Yjs; real auth (magic link); Markdown/PDF export; share-by-link.

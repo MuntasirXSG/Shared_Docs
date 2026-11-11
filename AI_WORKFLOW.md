@@ -1,11 +1,15 @@
-# AI workflow note
+**Tools used**:
+Claude (chat) for planning, all code generation, and documentation drafts.
 
-> DRAFT: replace every bracketed item with what actually happened. Reviewers value specifics over volume.
+ **My background and role**:
+My experience is in Gen AI/ML, LangChain/LangGraph, RAG, and agents. I have not built Node.js backends or UI/UX before, so Claude generated nearly all of the code. My role was to scope the product against the assignment, pick between the proposed stack options, run and test the result, and learn how it works well enough to explain and defend it.
 
-**Tools used:** Claude (planning, code generation) [add others, e.g. Copilot, Cursor].
+ Where AI materially sped up my work
+Everything in the app: the Express API, SQLite schema, sharing logic, React/TipTap editor, tests, Dockerfile, and docs. Without it I could not have shipped this in the timebox.
 
-**Where AI sped me up:** scaffolding the Express routes, SQLite schema and seed, the TipTap toolbar, and the first pass of tests and docs. [Add an estimate of time saved.]
+**How I verified**:
+ Ran the build and the 7 automated API tests myself; all pass.
 
-**What I changed or rejected:** [Fill in honestly. Examples to check against your own review: tightened sanitizer allowlist; decided to return 403 vs 404 for unshared documents; any bugs you hit on first run, such as dependency versions or the Dockerfile build.]
-
-**How I verified:** ran `npm test`; walked through the owner/editor/viewer flows in two browser profiles; tried a bad file type, an oversized file, an empty title, and a corrupted .docx; refreshed to confirm persistence; smoke-tested the deployed URL. [Edit to match what you really did.]
+- Deployed and smoke-tested the live URL.
+**Limits**:
+Because I did not write the Node/React code myself, my confidence comes from tests and manual testing, not from code-level expertise. 
